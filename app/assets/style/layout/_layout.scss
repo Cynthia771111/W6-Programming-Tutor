@@ -1,0 +1,43 @@
+.header {
+    p {
+      margin: 0;
+    }
+    .line {
+      width: 50%;
+      height: 2px;
+    }
+    .logo-lg {
+      width: 144px;
+      display: none;
+      @include media-breakpoint-up(sm) {
+        display: block;
+      }
+    }
+    .logo-sm {
+      width: 24px;
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+    }
+    .topbar {
+      display: none;
+      border: none;
+      .per-page:hover {
+        opacity: 0.8;
+      }
+      @include media-breakpoint-up(sm) {
+        display: flex;
+      }
+    }
+    .icon-menu {
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+    }
+  }
+  footer {
+    p {
+      margin-bottom: 0;
+      color: #909090;
+    }
+  }

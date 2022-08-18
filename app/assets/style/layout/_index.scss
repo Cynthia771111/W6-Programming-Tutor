@@ -1,0 +1,497 @@
+.index-section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .underline {
+    @include underline-type($secondary);
+  }
+}
+.hero {
+  background-image: url("../images/bg_home.jpg");
+  height: 336px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include media-breakpoint-up(md) {
+    height: 680px;
+  }
+  .hero-title {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include media-breakpoint-up(md) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  .hero-line-1,.hero-line-2 {
+    font-size: 24px;
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 48px;
+    }
+  }
+  .text {
+    font-size: 14px;
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+  }
+  .angle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+  }
+  .angle-1 {
+    left:-5px;
+    top:-5px;
+  }
+  .angle-2 {
+    right:-5px;
+    top:-5px;
+  }
+  .angle-3 {
+    right:-5px;
+    bottom:-5px;
+  }
+  .angle-4 {
+    left:-5px;
+    bottom:-5px;
+  }
+}
+.features {
+  @include section-top-and-bottom-padding-rwd;
+  .index-section-title {
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+  .underline {
+    @include underline-type($secondary);
+  }
+  .icon-frame {
+    width: 50px;
+    height: 50px;
+  }
+  .per-feature {
+    background: #202020;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    .icon {
+      background: linear-gradient(to top, $secondary, $tertiary);
+      background-clip: text;
+      color: transparent;
+    }
+    h3 {
+      font-weight: 700;
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      background: none;
+      height: 100%;
+      .icon {
+        color: #fff;
+      }
+      &:hover {
+        .icon {
+          background: linear-gradient(to top, $secondary, $tertiary);
+          background-clip: text;
+          color: transparent;
+        }
+        box-shadow: 0 0 0 2px $secondary inset;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+.process {
+  @include section-top-and-bottom-padding-rwd;
+  background: $black;
+  .per-step {
+    h3 {
+      font-weight: 700;
+    }
+    border-radius: 12px;
+    margin-bottom: 50px;
+    position: relative;
+    .number {
+      position: absolute;
+      top:-35px;
+      background: #000;
+    }
+    @include media-breakpoint-up(md) {
+      height: 100%;
+    }
+  }
+}
+.languages {
+  @include section-top-and-bottom-padding-rwd;
+  @include media-breakpoint-up(md) {
+    .title {
+      display: flex;
+    }
+  }
+  .language-row {
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+    }
+  }
+  .per-language {
+    border-radius: 12px;
+    border: 1px solid $white;
+  }
+}
+.recommend {
+  @include section-top-and-bottom-padding-rwd;
+  background: #000;
+  .align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .classes {
+    margin-bottom: 24px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 48px;
+    }
+  }
+  .per-class {
+    display: block;
+    margin-bottom: 16px;
+    background: $primary;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-breakpoint-up(lg) {
+      height: 100%;
+      &:hover {
+        box-shadow: 0 0 0 2px $secondary inset;
+        border-radius: 24px;
+      }
+    }
+  }
+  .teacher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 100px;
+      border-radius: 100px;
+    }
+  }
+  .class-name {
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 4px;
+    }
+  }
+  .price-section {
+    border-top: 1px solid $white;
+  }
+  .btn {
+    border-radius: 8px;
+    color: $white;
+    &:hover {
+      background: $secondary;
+      color: $black;
+    }
+  }
+}
+@mixin bg-image-opacity($url) {
+  position:relative;
+  z-index:0;
+  &::before {
+    content:"";
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: -1;
+    opacity:0.1;
+  }
+  @include media-breakpoint-up(md) {
+    &:hover::before {
+      opacity:0.5;
+    }
+  }
+
+}
+.special-points {
+  .per-point {
+    padding: 40px 48px 40px 48px;
+    padding-left: 72px;
+    padding-right: 72px;
+    align-items: center;
+    .icon-frame {
+      display: flex;
+      justify-content: center;
+    }
+    .icon {
+      color: $secondary;
+      opacity: 1;
+    }
+    .text {
+      text-align: center;
+    }
+    @include media-breakpoint-up(md) {
+      padding: 216px 48px 216px 48px;
+      padding-left: 48px;
+      padding-right: 48px;
+      align-items: flex-start;
+      .icon {
+        color: $white;
+        opacity: 0.5;
+      }
+      .index-section-title {
+        align-items: flex-start;
+        text-align: left;
+      }
+      .underline {
+        background: $white;
+      }
+      .text {
+        text-align: left;
+      }
+      &:hover {
+        .underline {
+          background: $secondary;
+        }
+        .icon {
+          color: $secondary;
+          opacity: 1;
+        }
+        .text {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .icon-frame {
+    width: 32px;
+    height: 32px;
+  }
+  .point-1 {
+    @include bg-image-opacity("../images/info01.jpg");
+  }
+  .point-2 {
+    @include bg-image-opacity("../images/info02.jpg");
+  }
+  .point-3 {
+    @include bg-image-opacity("../images/info03.jpg");
+  }
+  .point-4 {
+    @include bg-image-opacity("../images/info04.jpg");
+  }
+  .icon,.text {
+    opacity: 50%;
+  }
+  .underline {
+    @include underline-type($secondary);
+  }
+  // .underline {
+  //   @include underline-type($white);
+  // }
+}
+.articles {
+  .index-section-title {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-weight: 700;
+  }
+  @include section-top-and-bottom-padding-rwd;
+  background:$primary;
+  @include media-breakpoint-up(md) {
+    .index-section-title {
+      margin-bottom: 16px;
+    }
+    .per-article-frame:hover{
+      box-shadow: 0 0 0 1px $secondary inset;
+      border-radius: 12px;
+      position: relative;
+      .vertical-frame {
+        position: absolute;
+        width: 85%;
+        height: 102%;
+        // background: $white;
+        top: -2px;
+        left: 7.5%;
+        border-top: 12px solid $primary;
+        border-bottom: 12px solid $primary;
+  
+      }
+      .horizontal-frame {
+        position: absolute;
+        width: 102%;
+        height: 88%;
+        // background: $white;
+        top: 6%;
+        left: -1px;
+        border-right: 12px solid $primary;
+        border-left: 12px solid $primary;
+      }
+    }
+
+
+  }
+
+}
+.share {
+  @include section-top-and-bottom-padding-rwd;
+  .title-line-2 {
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+  .share-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .scroll-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @include media-breakpoint-up(md) {
+      align-items: flex-start;
+      margin-bottom: 160px;
+    }
+  }
+  .wireframe {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 40px;
+    z-index:2; 
+    @include media-breakpoint-up(md) {
+      width: 55%;
+      margin-bottom: 16px;
+    }
+  }
+  .pages {
+    margin-left: 0;
+    @include media-breakpoint-up(md) {
+      margin-left: 18%;
+    }
+    .icon {
+      color:$secondary;
+      opacity: 1;
+    }
+  }
+  .page-actived {
+    display: block;
+    width: 16px;
+    height: 6px;
+    border-radius: 10px;
+    background: $secondary;
+    margin-top: -10px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 6px;
+    }
+  }
+  .review {
+    width: 100%;
+    border-radius: 24px 24px 24px 0;
+    margin-bottom: 40px;
+    position: relative;
+    z-index:3;
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      width: 60%;
+      top: 200px;
+      right:0 ;
+    }
+    // @include media-breakpoint-up(md) {
+    //   width: 50%;
+    // }
+  }
+  .avatar {
+    width: 80px;
+    border-radius: 100px;
+    position: absolute;
+    right: 32px;
+    top: -30px;
+    @include media-breakpoint-up(sm) {
+      width: 100px;
+      right: 32px;
+      top: -50px;
+    }
+  }
+  .become-teacher {
+    background: #202020;
+    width: 100%;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-breakpoint-up(md) {
+      width: 85%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 840px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+  .icon {
+    font-size: 80px;
+    opacity: 0.5;
+    margin-bottom: 24px;
+    @include media-breakpoint-up(lg) {
+      margin-right: 48px;
+      margin-bottom: 0;
+    }
+  }
+  .slogan-and-text {
+      text-align: center;
+      margin-bottom: 8px;
+      h3 {
+        margin-bottom: 16px;
+      }
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+  button {
+    color: $white;
+    line-height: 18px;
+    padding: 8px 32px 12px 32px;
+    border: 1px solid $white;
+  }
+  .button:hover {
+    background: $white;
+    color: $black;
+  }
+
+
+  background-image: url("../images/bg_share.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

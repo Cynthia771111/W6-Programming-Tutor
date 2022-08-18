@@ -1,0 +1,13 @@
+@mixin underline-type($color) {
+    width: 50px;
+    height: 4px;
+    background: $color;
+  }
+@mixin section-top-and-bottom-padding-rwd {
+padding-top: 40px;
+padding-bottom: 40px;
+@include media-breakpoint-up(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+}

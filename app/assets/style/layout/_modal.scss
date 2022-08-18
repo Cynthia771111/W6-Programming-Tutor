@@ -1,0 +1,66 @@
+.modal {
+    .modal-header {
+      position: relative;
+      border: none;
+    }
+    .btn-close {
+      position: absolute;
+      margin-left: 0;
+      right: 24px;
+    }
+    label {
+      margin-left: 25%;
+      opacity: 0.5;
+    }
+    input {
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+      background: $black;
+      border: 1px solid $white;
+      border-radius: 4px;
+      padding: 8px 16px 8px 16px;
+    }
+    .submit {
+      background: linear-gradient(to left, $secondary, $tertiary);
+      border-radius: 8px;
+      border: none;
+    }
+    .modal-footer {
+      border:none;
+      position: relative;
+    }
+    .other-way {
+      opacity: 0.5;
+    }
+    .line {
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      background: $white;
+      opacity: 0.5;
+    }
+    .line-right {
+      top: 33px;
+      right: 130px;
+    }
+    .line-left {
+      top: 33px;
+      left: 130px;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      border: 1px solid $white;
+      background: $primary;
+      color: $white;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .image-sns {
+      width: 24px;
+      position: absolute;
+      left: 5%;
+    }
+  }

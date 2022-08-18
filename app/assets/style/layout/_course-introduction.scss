@@ -1,0 +1,50 @@
+.course-type-bar {
+    padding-top: 44px;
+    padding-bottom: 48px;
+    .type-names {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+          }
+    }
+    .per-type {
+        box-shadow: 0 0 0 1px $white inset;
+        border-radius: 12px;
+        &:hover {
+            box-shadow: 0 0 0 1px $secondary inset;
+            border-radius: 12px;
+            color: $secondary;
+        }
+    }
+    .actived {
+        box-shadow: 0 0 0 1px $secondary inset;
+        border-radius: 12px;
+        color: $secondary;
+
+    }
+}
+.course-list {
+    .per-course {
+        border-radius: 24px;
+    }
+    .avatar {
+        width: 100px;
+        border-radius: 100px;
+    }
+    .btn-intro{
+        color:$white;
+        &:hover{
+            background: $white;
+            color:$primary;
+        }
+    }
+    .btn-book {
+        color:$white;
+        &:hover {
+            background: $secondary;
+            color:$black;
+        }
+    }
+}
+
+
